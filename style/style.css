@@ -101,6 +101,7 @@ p{
     font-family: tahoma;
     margin: 10px;
     font-family: IRANSans;
+    position: relative;
 }
 .title_card{
     font-weight: bold;
@@ -125,4 +126,32 @@ p{
 }
 .italic_prph{
     font-style: italic;
+}
+/*---------------- absolute box with arrow ----------------*/
+.info-box-hover {
+    position: absolute;
+    top: 15px;
+    left: calc(100% + 14px);
+    width: 250px;
+    background: #f1f1f1;
+    padding: 11px;
+    border-radius: 8px;
+    opacity: 0;
+}
+
+.info-box-hover:before {
+    content: '';
+    position: absolute;
+    left: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent #f1f1f1 transparent transparent;
+    border-style: solid;
+    z-index: 2;
+}
+.card:hover .info-box-hover{
+    opacity: 1;
 }
